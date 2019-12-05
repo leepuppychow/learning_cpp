@@ -9,6 +9,12 @@ void printVector(vector<int> input) {
     }
 }
 
+void printMap(map<int, int> input) {
+    for (auto entry : input) {
+        cout << entry.first << '\t' << entry.second << endl;
+    }
+}
+
 vector<int> _map(vector<int> input, int (*fn)(int)) {
     vector<int> result;
     for (int value : input) {
@@ -59,9 +65,6 @@ int main() {
     tripled = _map(x, [](int num) { return num * 3; });
     printVector(tripled);
 
-    counter = counts(y);
-    for (auto entry : counter) {
-        cout << entry.first << '\t' << entry.second << endl;
-    }
+    printMap(counts(y));
     return 0;
 }
