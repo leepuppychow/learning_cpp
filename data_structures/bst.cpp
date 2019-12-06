@@ -13,6 +13,7 @@ public:
     }
 };
 
+
 class Tree {
 public:
     Node* root;
@@ -71,6 +72,8 @@ int main() {
     tr.insert(75);
     tr.insert(30);
     tr.insert(20);
+    tr.insert(101);
+    tr.insert(19);
 
     cout << tr.root->data << endl;
     cout << tr.root->left->data << endl;
