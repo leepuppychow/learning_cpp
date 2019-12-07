@@ -63,8 +63,7 @@ private:
 
 
 int main() {
-    Node root(50);
-    Tree tr(&root);
+    Tree tr(new Node(50));
 
     tr.insert(25);
     tr.insert(75);
@@ -84,12 +83,3 @@ int main() {
     return 0;
 }
 
-
-/*
-        50
-      /    \
-    25      75
-   /  \
- 20    30
-
-*/
