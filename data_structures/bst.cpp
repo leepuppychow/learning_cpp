@@ -38,16 +38,14 @@ private:
         if (value < current->data) {
             if (!current->left) {
                 current->left = new Node(value);
-                return;
             } else {
-                return _insertNode(value, current->left);
+                _insertNode(value, current->left);
             }
         } else {
             if (!current->right) {
                 current->right = new Node(value);
-                return;
             } else {
-                return _insertNode(value, current->right);
+                _insertNode(value, current->right);
             }
         }
     };
