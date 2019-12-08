@@ -9,8 +9,8 @@ public:
     Node* right = NULL;
     Node* left = NULL;
 
-    Node(int _data) {
-        data = _data;
+    Node(int data) {
+        this->data = data;
     }
 };
 
@@ -20,8 +20,8 @@ public:
     Node* root;
     string output;
 
-    Tree(Node* _root) {
-        root = _root;
+    Tree(Node* root) {
+        this->root = root;
     }
 
     void insert_all(vector<int> values) {
@@ -31,12 +31,12 @@ public:
     }
 
     void insert(int value) {
-        _insert(value, root);
+        _insert(value, this->root);
         cout << "Insert successful for: " << value << endl;
     }
 
     void sort() {
-        _sort(root);
+        _sort(this->root);
         cout << output << endl;
     }
 
