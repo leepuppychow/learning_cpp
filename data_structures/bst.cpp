@@ -24,7 +24,7 @@ public:
     }
 
     void insert(int value) {
-        _insertNode(value, root);
+        _insert(value, root);
         cout << "Insert " << value << " successful" << endl;
     }
 
@@ -34,18 +34,18 @@ public:
     }
 
 private:
-    void _insertNode(int value, Node* current) {
+    void _insert(int value, Node* current) {
         if (value < current->data) {
             if (!current->left) {
                 current->left = new Node(value);
             } else {
-                _insertNode(value, current->left);
+                _insert(value, current->left);
             }
         } else {
             if (!current->right) {
                 current->right = new Node(value);
             } else {
-                _insertNode(value, current->right);
+                _insert(value, current->right);
             }
         }
     };
