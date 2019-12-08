@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Node {
@@ -23,9 +24,15 @@ public:
         root = _root;
     }
 
+    void insert_all(vector<int> values) {
+        for (auto value : values) {
+            insert(value);
+        }
+    }
+
     void insert(int value) {
         _insert(value, root);
-        cout << "Insert " << value << " successful" << endl;
+        cout << "Insert successful for: " << value << endl;
     }
 
     void sort() {
@@ -64,13 +71,8 @@ private:
 
 int main() {
     Tree tr(new Node(50));
-
-    tr.insert(25);
-    tr.insert(75);
-    tr.insert(30);
-    tr.insert(20);
-    tr.insert(101);
-    tr.insert(19);
+    vector<int> values{25,75,30,20,101,19};
+    tr.insert_all(values);
 
     cout << tr.root->data << endl;
     cout << tr.root->left->data << endl;
